@@ -21,5 +21,11 @@ Route::get('/', function () {
 });
 
 Route::get('/champions', function () {
-    return Champions::all();
+    $champions = DB::table('champions')
+                ->leftJoin('types', 'champions.types_id', '=', 'types.id')
+                ->leftJoin('roles', 'champions.roles_id', '=', 'roles.id')
+                ->select('champions.name as champname', 'champions.description as champdescription', 'champions.path_icon as champicon', 'types.name as type', 'roles.name as role')
+                ->get();
+
+    return $champions;
 });
