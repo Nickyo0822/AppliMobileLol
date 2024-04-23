@@ -14,6 +14,11 @@ class ChampController extends Controller
                 ->get();
 
         $champ = json_decode($champ, true);
+
+        if (empty($champ)) {
+            return array();
+        }
+
         $id_champ = $champ[0]['id'];
 
         $spellChamp = DB::table('spells')
