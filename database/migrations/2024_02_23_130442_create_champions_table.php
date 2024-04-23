@@ -30,6 +30,10 @@ return new class extends Migration
                 'name' => 'Ahri',
                 'description' => 'Connectée à la magie du royaume spirituel, Ahri est une mystérieuse Vastaya aux traits de renard qui peut manipuler les émotions de sa proie et consumer son essence, afin de recevoir des fragments de sa mémoire. Ahri fut un temps un terrifiant prédateur, mais elle voyage désormais à la recherche des vestiges de ses ancêtres tout en essayant de remplacer les souvenirs qu\'elle a volés par sa propre expérience de l\'existence.',
                 'path_icon' => 'images/champions/Ahri.png'
+            ], [
+                'name' => 'Akali',
+                'description' => 'Ayant abandonné l\'Ordre Kinkou et le titre de Poing de l\'ombre, Akali combat aujourd\'hui seule, prête à devenir l\'arme mortelle dont son peuple a besoin. Bien qu\'elle n\'oublie rien de tout ce que son maître Shen lui a enseigné, elle a juré de défendre Ionia contre ses ennemis, une élimination après l\'autre. Akali tue sans faire de bruit, mais son message est fort et clair : craignez l\'assassin sans maître.',
+                'path_icon' => 'images/champions/Akali.png'
             ]
         ];
 

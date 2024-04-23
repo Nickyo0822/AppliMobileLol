@@ -26,6 +26,12 @@ return new class extends Migration
             ], [
                 'champions_id' => 2,
                 'roles_id' => 3
+            ], [
+                'champions_id' => 3,
+                'roles_id' => 3
+            ], [
+                'champions_id' => 3,
+                'roles_id' => 4
             ]
         ];
 

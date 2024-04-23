@@ -83,6 +83,36 @@ return new class extends Migration
                 'description' => 'Ahri se rue vers l\'avant et tire des traits spirituels, infligeant des dégâts aux ennemis proches. Assaut spirituel peut être lancé jusqu\'à 3 fois avant d\'entrer en phase de récupération et Ahri gagne des réactivations en participant à l\'élimination de champions ennemis.',
                 'path_icon' => 'images/spells/Ahri_R.png',
                 'champions_id' => 2
+            ], [
+                'name' => 'MARQUE D\'ASSASSIN',
+                'touch' => 'passive',
+                'description' => 'Blesser un champion avec une compétence crée un cercle d\'énergie autour de lui. Quitter ce cercle renforce la prochaine attaque d\'Akali en augmentant sa portée et ses dégâts.',
+                'path_icon' => 'images/spells/Akali_Passive.png',
+                'champions_id' => 3
+            ], [
+                'name' => 'VAGUE DE KUNAIS',
+                'touch' => 'A',
+                'description' => 'Akali lance cinq kunais, infligeant des dégâts selon ses dégâts d\'attaque supplémentaires et sa puissance et ralentissant les ennemis.',
+                'path_icon' => 'images/spells/Akali_A.png',
+                'champions_id' => 3
+            ], [
+                'name' => 'LINCEUL NÉBULEUX',
+                'touch' => 'Z',
+                'description' => 'Akali crée un nuage de fumée et augmente brièvement sa vitesse de déplacement. Dans ce nuage, Akali est invisible et impossible à cibler. Si elle attaque ou utilise des compétences, elle est temporairement révélée.',
+                'path_icon' => 'images/spells/Akali_Z.png',
+                'champions_id' => 3
+            ], [
+                'name' => 'LANCER ACROBATIQUE',
+                'touch' => 'E',
+                'description' => 'Fait un salto arrière et lance un shuriken vers l\'avant, infligeant des dégâts magiques. Le premier ennemi ou nuage de fumée touché est marqué. Réactivez la compétence pour vous ruer sur la cible marquée et infliger des dégâts supplémentaires.',
+                'path_icon' => 'images/spells/Akali_E.png',
+                'champions_id' => 3
+            ], [
+                'name' => 'MAÎTRISE ABSOLUE',
+                'touch' => 'R',
+                'description' => 'Akali bondit dans une direction, blessant les ennemis qu\'elle frappe. Réactivation : Akali se rue dans une direction, exécutant tous les ennemis qu\'elle frappe.',
+                'path_icon' => 'images/spells/Akali_R.png',
+                'champions_id' => 3
             ]
         ];
 
