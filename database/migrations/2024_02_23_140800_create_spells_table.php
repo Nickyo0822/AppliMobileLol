@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('touch');
-            $table->string('description');
+            $table->text('description');
             $table->string('path_icon');
             $table->foreignIdFor(Champions::class)->constrained()->cascadeOnDelete();
         });
@@ -53,7 +53,37 @@ return new class extends Migration
                 'description' => 'Aatrox libère sa forme démoniaque, effrayant les sbires ennemis proches et augmentant ses dégâts d\'attaque, ses soins et sa vitesse de déplacement. La durée est prolongée s\'il participe à l\'élimination d\'un champion ennemi.',
                 'path_icon' => 'images/spells/Aatrox_R.png',
                 'champions_id' => 1
-            ],
+            ], [
+                'name' => 'VOL ESSENTIEL',
+                'touch' => 'passive',
+                'description' => 'Après avoir tué 9 sbires ou monstres, Ahri récupère des PV. Après avoir participé à l\'élimination d\'un champion ennemi, Ahri récupère encore plus de PV.',
+                'path_icon' => 'images/spells/Ahri_Passive.png',
+                'champions_id' => 2
+            ], [
+                'name' => 'ORBE D\'ILLUSION',
+                'touch' => 'A',
+                'description' => 'Ahri lance son orbe et le ramène vers elle, infligeant des dégâts magiques à l\'aller et des dégâts bruts au retour.',
+                'path_icon' => 'images/spells/Ahri_A.png',
+                'champions_id' => 2
+            ], [
+                'name' => 'LUCIOLES',
+                'touch' => 'Z',
+                'description' => 'Ahri gagne un bref bonus en vitesse de déplacement et libère trois lucioles qui verrouillent et attaquent les ennemis proches.',
+                'path_icon' => 'images/spells/Ahri_Z.png',
+                'champions_id' => 2
+            ], [
+                'name' => 'CHARME',
+                'touch' => 'E',
+                'description' => 'Ahri envoie un baiser qui blesse et charme le premier ennemi qu\'il touche, interrompant immédiatement ses compétences de déplacement et le faisant marcher docilement vers elle.',
+                'path_icon' => 'images/spells/Ahri_E.png',
+                'champions_id' => 2
+            ], [
+                'name' => 'ASSAUT SPIRITUEL',
+                'touch' => 'R',
+                'description' => 'Ahri se rue vers l\'avant et tire des traits spirituels, infligeant des dégâts aux ennemis proches. Assaut spirituel peut être lancé jusqu\'à 3 fois avant d\'entrer en phase de récupération et Ahri gagne des réactivations en participant à l\'élimination de champions ennemis.',
+                'path_icon' => 'images/spells/Ahri_R.png',
+                'champions_id' => 2
+            ]
         ];
 
         foreach ($allSpells as $data) {

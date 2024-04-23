@@ -19,17 +19,17 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('path_icon');
-            $table->foreignIdFor(Types::class)->constrained()->cascadeOnDelete();
-            $table->foreignIdFor(Roles::class)->constrained()->cascadeOnDelete();
         });
 
         $allChamps = [
             [
                 'name' => 'Aatrox',
                 'description' => 'Autrefois, Aatrox et ses frères étaient honorés pour avoir défendu Shurima contre le Néant. Mais ils finirent par devenir une menace plus grande encore pour Runeterra : la ruse et la sorcellerie furent employées pour les battre. Cependant, après des siècles d\'emprisonnement, Aatrox fut le premier à retrouver sa liberté, en corrompant et transformant les mortels assez stupides pour tenter de s\'emparer de l\'arme magique qui contenait son essence. Désormais en possession d\'un corps qu\'il a approximativement transformé pour rappeler son ancienne forme, il arpente Runeterra en cherchant à assouvir sa vengeance apocalyptique.',
-                'path_icon' => 'images/champions/Aatrox.png',
-                'types_id' => 2,
-                'roles_id' => 4
+                'path_icon' => 'images/champions/Aatrox.png'
+            ], [
+                'name' => 'Ahri',
+                'description' => 'Connectée à la magie du royaume spirituel, Ahri est une mystérieuse Vastaya aux traits de renard qui peut manipuler les émotions de sa proie et consumer son essence, afin de recevoir des fragments de sa mémoire. Ahri fut un temps un terrifiant prédateur, mais elle voyage désormais à la recherche des vestiges de ses ancêtres tout en essayant de remplacer les souvenirs qu\'elle a volés par sa propre expérience de l\'existence.',
+                'path_icon' => 'images/champions/Ahri.png'
             ]
         ];
 

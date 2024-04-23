@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChampController;
 use App\Models\Champions;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -20,11 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/champions/{champion}', [ChampController::class, 'returnChampion']);
+
 Route::get('/champions', function () {
     $champions = DB::table('champions')
-                ->leftJoin('types', 'champions.types_id', '=', 'types.id')
-                ->leftJoin('roles', 'champions.roles_id', '=', 'roles.id')
-                ->select('champions.name', 'champions.description', 'champions.path_icon as icon', 'types.name as type', 'roles.name as role')
                 ->get();
 
     return $champions;
