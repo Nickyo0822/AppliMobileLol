@@ -15,19 +15,25 @@ return new class extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('path_icon');
         });
 
         $allRoles = [
             [
-                'name' => 'ADC'
+                'name' => 'ADC',
+                'path_icon' => 'images/roles/ADC.png'
             ], [
-                'name' => 'Support'
+                'name' => 'Support',
+                'path_icon' => 'images/roles/Support.png'
             ], [
-                'name' => 'Mid'
+                'name' => 'Mid',
+                'path_icon' => 'images/roles/Mid.png'
             ], [
-                'name' => 'Top'
+                'name' => 'Top',
+                'path_icon' => 'images/roles/Top.png'
             ], [
-                'name' => 'Jungle'
+                'name' => 'Jungle',
+                'path_icon' => 'images/roles/Jungle.png'
             ]
         ];
 

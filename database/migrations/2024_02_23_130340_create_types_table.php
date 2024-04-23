@@ -15,21 +15,28 @@ return new class extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('path_icon');
         });
 
         $allTypes = [
             [
-                'name' => 'Assassin'
+                'name' => 'Assassin',
+                'path_icon' => 'images/types/Assassin.png'
             ], [
-                'name' => 'Combattant'
+                'name' => 'Combattant',
+                'path_icon' => 'images/types/Combattant.png'
             ], [
-                'name' => 'Mage'
+                'name' => 'Mage',
+                'path_icon' => 'images/types/Mage.png'
             ], [
-                'name' => 'Tireur'
+                'name' => 'Tireur',
+                'path_icon' => 'images/types/Tireur.png'
             ], [
-                'name' => 'Support'
+                'name' => 'Support',
+                'path_icon' => 'images/types/Support.png'
             ], [
-                'name' => 'Tank'
+                'name' => 'Tank',
+                'path_icon' => 'images/types/Tank.png'
             ]
         ];
 
