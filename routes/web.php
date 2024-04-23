@@ -24,8 +24,17 @@ Route::get('/champions', function () {
     $champions = DB::table('champions')
                 ->leftJoin('types', 'champions.types_id', '=', 'types.id')
                 ->leftJoin('roles', 'champions.roles_id', '=', 'roles.id')
-                ->select('champions.name as champname', 'champions.description as champdescription', 'champions.path_icon as champicon', 'types.name as type', 'roles.name as role')
+                ->select('champions.name', 'champions.description', 'champions.path_icon as icon', 'types.name as type', 'roles.name as role')
                 ->get();
 
     return $champions;
+});
+
+Route::get('/spells', function () {
+    $spells = DB::table('spells')
+                ->leftJoin('champions', 'spells.champions_id', '=', 'champions.id')
+                ->select('champions.name', 'spells.name as spellname', 'spells.touch', 'spells.description', 'spells.path_icon as icon')
+                ->get();
+
+    return $spells;
 });

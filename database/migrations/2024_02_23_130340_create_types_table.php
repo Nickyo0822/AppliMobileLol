@@ -19,17 +19,17 @@ return new class extends Migration
 
         $allTypes = [
             [
-                'name' => 'Assassins'
+                'name' => 'Assassin'
             ], [
-                'name' => 'Combattants'
+                'name' => 'Combattant'
             ], [
-                'name' => 'Mages'
+                'name' => 'Mage'
             ], [
-                'name' => 'Tireurs'
+                'name' => 'Tireur'
             ], [
-                'name' => 'Supports'
+                'name' => 'Support'
             ], [
-                'name' => 'Tanks'
+                'name' => 'Tank'
             ]
         ];
 
