@@ -22,6 +22,8 @@ Route::get('/', function () {
 });
 
 Route::get('/champions/{champion}', [ChampController::class, 'returnChampion']);
+Route::get('/champions/{champion}/roles', [ChampController::class, 'getChampionRoles']);
+Route::get('/champions/{champion}/types', [ChampController::class, 'getChampionTypes']);
 
 Route::get('/champions', function () {
     $champions = DB::table('champions')
