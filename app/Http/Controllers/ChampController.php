@@ -28,11 +28,13 @@ class ChampController extends Controller
         $roleChamp = DB::table('champions_roles')
                         ->leftJoin('roles', 'champions_roles.roles_id', '=', 'roles.id')
                         ->where('champions_roles.champions_id', '=', $id_champ)
+                        ->select('roles.id', 'roles.name as roles', 'roles.path_icon')
                         ->get();
 
         $typeChamp = DB::table('champions_types')
                         ->leftJoin('types', 'champions_types.types_id', '=', 'types.id')
                         ->where('champions_types.champions_id', '=', $id_champ)
+                        ->select('types.id', 'types.name as types', 'types.path_icon')
                         ->get();
         
         $spellChamp = json_decode($spellChamp, true);
